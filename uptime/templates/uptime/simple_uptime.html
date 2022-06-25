@@ -8,7 +8,85 @@
 
 {% block content %}
 
-    <h1> Calculate Simple Uptime </h1>
+    <h3 class="text-bg-dark p-3"> Calculate Simple Uptime </h3>
+    <br/>
+    <br/>
+
+    <div>
+        <form method="get">
+            <div class="input-group mb-3">
+                <input type="text" name="simple_sla" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                <button class="btn btn btn-dark" type="submit" id="button-addon1">Enter SLA% and click</button>
+              </div>
+        </form>
+    </div>
+    <br/>
+    <br/>
+    {% if agreed_sla_level %}
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+            <div class="card h-100 text-bg-primary">
+                <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger"> SLA {{ agreed_sla_level.SLA }} % </span>
+                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                <h5 class="card-title">Daily Downtime</h5>
+                <p class="card-text">{{ agreed_sla_level.dailyDown }}</p>
+                </div>
+                <div class="card-footer">
+                <!-- <small class="text-muted">Last updated Implement later</small> -->
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card h-100 text-bg-secondary">
+                <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger"> SLA {{ agreed_sla_level.SLA }} % </span>
+                <div class="card-body">
+                <h5 class="card-title">Weekly Downtime</h5>
+                <p class="card-text">{{ agreed_sla_level.weeklyDown }}</p>
+                </div>
+                <div class="card-footer">
+                <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card h-100 text-bg-success">
+                <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger"> SLA {{ agreed_sla_level.SLA }} % </span>
+                <div class="card-body">
+                <h5 class="card-title">Monthly Downtime</h5>
+                <p class="card-text">{{ agreed_sla_level.monthlyDown }}</p>
+                </div>
+                <div class="card-footer">
+                <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+                </div>
+            </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 text-bg-warning">
+                    <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger"> SLA {{ agreed_sla_level.SLA }} % </span>
+                    <div class="card-body">
+                    <h5 class="card-title">Quarterly Downtime</h5>
+                    <p class="card-text">{{ agreed_sla_level.quarterlyDown }}</p>
+                </div>
+                <div class="card-footer">
+                    <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+                </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 text-bg-info">
+                    <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger"> SLA {{ agreed_sla_level.SLA }} % </span>
+                    <div class="card-body">
+                    <h5 class="card-title">Yearly Downtime</h5>
+                    <p class="card-text">{{ agreed_sla_level.yearlyDown }}</p>
+                </div>
+                <div class="card-footer">
+                    <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+                </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
 
 
 {% endblock %}

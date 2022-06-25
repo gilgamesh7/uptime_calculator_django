@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+import logging
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,6 +29,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Initialise Logger
+logging.basicConfig(level=logging.INFO, format="[{asctime}] - {funcName} - {message}", style='{')
+logger = logging.getLogger("SLA_UPTIME")
 
 # Application definition
 
