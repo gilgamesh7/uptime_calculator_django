@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'uptime',
+    'sla',
 ]
 
 MIDDLEWARE = [
@@ -61,7 +62,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'templates', 'uptime')
+            os.path.join(BASE_DIR, 'templates', 'uptime'),
+            os.path.join(BASE_DIR, 'templates', 'sla'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {

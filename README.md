@@ -17,7 +17,9 @@ In Dev : [Uptime & SLA Calculator]()
 # Set up for development
 1. Install & activate venv (python3 -m venv venv --upgrade-deps)
 2. Generate project : ./venv/bin/django-admin startproject calculate_sla_uptime .  
-3. Generate application : python3 manage.py startapp uptime
+3. Generate applications : 
+- python3 manage.py startapp uptime
+- python3 manage.py startapp sla
 
 # To migrate after changing models
 1. python manage.py makemigrations

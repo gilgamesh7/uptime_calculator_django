@@ -1,0 +1,33 @@
+{% extends 'sla/base.html' %}
+
+{% load static %}
+
+{% block title%}
+    Calculate Simple SLA
+{% endblock %}
+
+{% block content %}
+
+    <h3 class="text-bg-dark p-3"> Calculate Simple SLA </h3>
+    <br/>
+    <br/>
+
+    <div>
+        <form method="get">
+            <div class="input-group mb-3">
+                <input type="text" name="simple_uptime" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                <button class="btn btn btn-dark" type="submit" id="button-addon1">Enter Required Uptime and click</button>
+              </div>
+        </form>
+    </div>
+    <br/>
+    <br/>
+
+
+    
+    {% if simple_downtime_data %}
+
+    {% endif %}
+
+
+{% endblock %}

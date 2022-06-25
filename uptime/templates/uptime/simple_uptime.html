@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block title%}
-    Calculate Simple SLA
+    Calculate Simple Uptime
 {% endblock %}
 
 {% block content %}
@@ -22,15 +22,15 @@
     </div>
     <br/>
     <br/>
-    {% if agreed_sla_level %}
+    {% if simple_downtime_data %}
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
             <div class="card h-100 text-bg-primary">
-                <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger"> SLA {{ agreed_sla_level.SLA }} % </span>
+                <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger"> SLA {{ simple_downtime_data.SLA }} % </span>
                 <!-- <img src="..." class="card-img-top" alt="..."> -->
                 <div class="card-body">
                 <h5 class="card-title">Daily Downtime</h5>
-                <p class="card-text">{{ agreed_sla_level.dailyDown }}</p>
+                <p class="card-text">{{ simple_downtime_data.dailyDown }}</p>
                 </div>
                 <div class="card-footer">
                 <!-- <small class="text-muted">Last updated Implement later</small> -->
@@ -39,10 +39,10 @@
             </div>
             <div class="col">
             <div class="card h-100 text-bg-secondary">
-                <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger"> SLA {{ agreed_sla_level.SLA }} % </span>
+                <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger"> SLA {{ simple_downtime_data.SLA }} % </span>
                 <div class="card-body">
                 <h5 class="card-title">Weekly Downtime</h5>
-                <p class="card-text">{{ agreed_sla_level.weeklyDown }}</p>
+                <p class="card-text">{{ simple_downtime_data.weeklyDown }}</p>
                 </div>
                 <div class="card-footer">
                 <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
@@ -51,10 +51,10 @@
             </div>
             <div class="col">
             <div class="card h-100 text-bg-success">
-                <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger"> SLA {{ agreed_sla_level.SLA }} % </span>
+                <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger"> SLA {{ simple_downtime_data.SLA }} % </span>
                 <div class="card-body">
                 <h5 class="card-title">Monthly Downtime</h5>
-                <p class="card-text">{{ agreed_sla_level.monthlyDown }}</p>
+                <p class="card-text">{{ simple_downtime_data.monthlyDown }}</p>
                 </div>
                 <div class="card-footer">
                 <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
@@ -63,10 +63,10 @@
             </div>
             <div class="col">
                 <div class="card h-100 text-bg-warning">
-                    <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger"> SLA {{ agreed_sla_level.SLA }} % </span>
+                    <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger"> SLA {{ simple_downtime_data.SLA }} % </span>
                     <div class="card-body">
                     <h5 class="card-title">Quarterly Downtime</h5>
-                    <p class="card-text">{{ agreed_sla_level.quarterlyDown }}</p>
+                    <p class="card-text">{{ simple_downtime_data.quarterlyDown }}</p>
                 </div>
                 <div class="card-footer">
                     <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
@@ -75,10 +75,10 @@
             </div>
             <div class="col">
                 <div class="card h-100 text-bg-info">
-                    <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger"> SLA {{ agreed_sla_level.SLA }} % </span>
+                    <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger"> SLA {{ simple_downtime_data.SLA }} % </span>
                     <div class="card-body">
                     <h5 class="card-title">Yearly Downtime</h5>
-                    <p class="card-text">{{ agreed_sla_level.yearlyDown }}</p>
+                    <p class="card-text">{{ simple_downtime_data.yearlyDown }}</p>
                 </div>
                 <div class="card-footer">
                     <!-- <small class="text-muted">Last updated 3 mins ago</small> -->

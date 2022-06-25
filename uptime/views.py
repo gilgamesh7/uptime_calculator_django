@@ -8,7 +8,7 @@ import requests
 
 # Create your views here.
 def simple_uptime(request):
-    agreed_sla_level = {}
+    simple_downtime_data = {}
 
     if 'simple_sla' in request.GET:
         try:
@@ -18,9 +18,9 @@ def simple_uptime(request):
                 response = session.get('https://get.uptime.is/api', params={'sla': simple_sla})
                 response.raise_for_status()
 
-            agreed_sla_level = response.json()
+            simple_downtime_data = response.json()
         except Exception as err:
             logger.error(f"Exception : {err}")
 
-    return render(request, 'uptime/simple_uptime.html', {'agreed_sla_level':agreed_sla_level})
+    return render(request, 'uptime/simple_uptime.html', {'simple_downtime_data':simple_downtime_data})
 
