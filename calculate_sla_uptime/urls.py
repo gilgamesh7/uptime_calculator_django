@@ -15,9 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from .views import uptime_sla
+
+app_name='uptime_sla'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', uptime_sla, name='homepage'),
     path('uptime/', include('uptime.urls')),
     path('sla/', include('sla.urls')),
 ]

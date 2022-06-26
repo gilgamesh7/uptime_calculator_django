@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'uptime',
     'sla',
+    'calculate_sla_uptime',
 ]
 
 MIDDLEWARE = [
@@ -58,10 +59,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'calculate_sla_uptime.urls'
 
+print(BASE_DIR)
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
+            os.path.join(BASE_DIR, 'templates', 'uptime_sla'),
             os.path.join(BASE_DIR, 'templates', 'uptime'),
             os.path.join(BASE_DIR, 'templates', 'sla'),
         ],
