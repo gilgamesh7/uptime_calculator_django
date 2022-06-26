@@ -16,11 +16,13 @@
         <br/>
         <br/>
         <nav class="navbar navbar-expand-lg bg-light">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Klingon_Empire_Flag.svg/320px-Klingon_Empire_Flag.svg.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
             <div class="container-fluid">
-              <a class="navbar-brand" href="{% url 'uptime_calculator:simple-uptime' %}">Simple Uptime Calculation</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="{% url 'uptime_calculator:simple-uptime' %}">Simple Uptime Calculation</a>
+              </div>
+
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                   <a class="nav-link active" aria-current="page" href="{% url 'sla_calculator:simple-sla' %}">Simple SLA Calculation</a>
