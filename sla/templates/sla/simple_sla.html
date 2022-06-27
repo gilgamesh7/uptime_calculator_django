@@ -15,7 +15,12 @@
     <div>
         <form method="get">
             <div class="input-group mb-3">
-                <input type="text" name="simple_uptime" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                <label for="simple_uptime_hours">Hours    </label>
+                <input type="text" name="simple_uptime_hours" class="form-control" placeholder="" aria-label="Hours" aria-describedby="button-addon1">
+                <label for="simple_uptime_minutes">Minutes    </label>
+                <input type="text" name="simple_uptime_minutes" class="form-control" placeholder="" aria-label="Minutes" aria-describedby="button-addon2">
+                <label for="simple_uptime_seconds"> Seconds    </label>                
+                <input type="text" name="simple_uptime_seconds" class="form-control" placeholder="" aria-label="Seconds" aria-describedby="button-addon3">
                 <button class="btn btn btn-dark" type="submit" id="button-addon1">Enter Required Uptime and click</button>
               </div>
         </form>
