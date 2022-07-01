@@ -1,9 +1,9 @@
 # uptime_calculator_django
 
 # Link to app
-On Azure : [Uptime & SLA Calculator]()
+On Azure : [Uptime & SLA Calculator](http://calculate-uptime-sla.azurewebsites.net/uptime/simple_uptime/)
 <br/>
-In Dev : [Uptime & SLA Calculator]()
+In Dev : [Uptime & SLA Calculator](http://127.0.0.1:8000/uptime/simple_uptime/)
 
 # Learning Links
 [Django REST API](https://simpleisbetterthancomplex.com/tutorial/2018/02/03/how-to-use-restful-apis-with-django.html) <br>

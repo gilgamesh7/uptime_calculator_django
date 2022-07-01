@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-1v@ma0e=d7rwpi(*1%xz*qe08&343*ji6-6k1*3l5*cnqcy)8&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['calculate-uptime-sla.azurewebsites.net','http://127.0.0.1']
+ALLOWED_HOSTS = ['calculate-uptime-sla.azurewebsites.net','127.0.0.1']
 
 # Initialise Logger
 logging.basicConfig(level=logging.INFO, format="[{asctime}] - {funcName} - {message}", style='{')
